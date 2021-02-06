@@ -3,5 +3,6 @@ RUN apt-get update && apt-get install nodejs -y
 # && apt-get install npm -y
 RUN curl https://www.npmjs.com/install.sh | sh
 RUN dotnet tool install -g Amazon.Lambda.Tools
+RUN apt-get install zip unzip
 ENV PATH "$PATH:/root/.dotnet/tools"
 RUN npm install -g aws-cdk
